@@ -32,7 +32,22 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
+
+;; Set Gruvbox theme with hard variant
+(setq doom-theme 'doom-gruvbox
+      doom-gruvbox-dark-variant "hard")
+
+;; Override all background colors to #2b2b2b after theme load
+(custom-set-faces!
+  '(default :background "#2b2b2b")
+  '(hl-line :background "#2b2b2b")
+  '(mode-line :background "#2b2b2b")
+  '(mode-line-inactive :background "#2b2b2b")
+  '(solaire-default-face :background "#2b2b2b")
+  '(solaire-line-number-face :background "#2b2b2b")
+  '(solaire-hl-line-face :background "#2b2b2b")
+  '(solaire-mode-line-face :background "#2b2b2b")
+  '(solaire-mode-line-inactive-face :background "#2b2b2b"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -79,7 +94,7 @@
 (after! web-mode
   (define-key web-mode-map (kbd "M-/") nil))
 
+(setq evil-ex-substitute-global t)
+
 (setq auto-save-default t
       make-backup-files t)
-
-(add-hook 'vue-mode-hook #'lsp!)

@@ -5,7 +5,7 @@
 
 My declarative way to manage Linux system configuration, including packages, system settings, and development environment using [NixOS](https://nixos.org) and [Home Manager](https://github.com/nix-community/home-manager).
 
-For my declarative way to manage MacOS system configuration, see https://github.com/CuriousCorrelation/nix-darwin
+#### For my declarative way to manage MacOS system configuration, see https://github.com/CuriousCorrelation/nix-darwin
 
 ## Why?
 
