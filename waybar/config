@@ -1,0 +1,119 @@
+{
+   "position":"top",
+   "modules-left":[
+      "sway/workspaces",
+      "sway/window",
+   ],
+   "modules-center":[
+      "cpu",
+      "memory",
+      "disk",
+      "temperature",
+   ],
+   "modules-right":[
+      "network",
+      "battery",
+      "bluetooth",
+      "tray",
+      "clock",
+   ],
+   "sway/window": {
+    "format": "{}",
+   },
+   "sway/workspaces": {
+      "disable-scroll":true,
+      "all-outputs":true,
+      "format":"{icon}",
+      "persistent-workspaces":{
+         "1":[
+            
+         ],
+         "2":[
+            
+         ],
+         "3":[
+            
+         ],
+         "4":[
+            
+         ],
+         "5":[
+            
+         ]
+      },
+      "format-icons":{
+         "1":"1",
+         "2":"2",
+         "3":"3",
+         "4":"4",
+         "5":"5"
+      }
+   },
+   "clock":{
+      "format":"  {:%Y-%m-%d %H:%M}",
+      "tooltip-format":"<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+   },
+   "battery":{
+      "states":{
+         "good":95,
+         "warning":30,
+         "critical":15
+      },
+      "format":" {icon} {capacity}%",
+      "format-charging":" {capacity}%",
+      "format-plugged":" {capacity}%",
+      "format-alt":"{icon} {time}",
+      "format-full":"  100%",
+      "format-icons":[
+         "",
+         "",
+         "",
+         "",
+         ""
+      ]
+   },
+   "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "󰖩  󰅀 {bandwidthDownBits} 󰅃 {bandwidthUpBits} | {essid} {signalStrength}%",
+      "format-disconnected": "-",
+      "tooltip-format": "󰖩  {ifname} via {gwaddr}",
+      "tooltip-format-wifi": "󰖩  {essid} {signalStrength}%",
+      "tooltip-format-ethernet": "  {ifname}",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 50,
+      "interval": 5
+   },
+   "bluetooth": {
+      "format": "󰂯 {status}",
+      "format-disabled": "",
+      "format-connected": "󰂯 {num_connections}",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+   },
+   "cpu": {
+      "format": "  {usage}%",
+  },
+  "memory": {
+      "format": "  {}%"
+  },
+  "temperature": {
+      "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+      "critical-threshold": 80,
+      "format-critical": "{icon} {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
+      "format-icons":[
+         "",
+         "",
+         "",
+         "",
+         ""
+      ]
+  },
+  "disk": {
+        "format": "  {percentage_used}%",
+        "path": "/",
+        "interval": 360
+  }
+}

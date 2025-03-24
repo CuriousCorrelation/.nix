@@ -1,0 +1,72 @@
+@define-color stats-text #ccc;
+@define-color stats-background #000;
+
+@define-color workspace-text #ccc;
+@define-color workspace-background #000;
+
+@define-color workspace-text-focused #000;
+@define-color workspace-background-focused #ccc;
+
+* {
+    border: none;
+    font-family: Iosevka Nerd Font;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #000;
+}
+
+tooltip {
+    background: @stats-background;
+    border-color: @workspace-background;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: @workspace-text;
+}
+
+#workspaces button.focused {
+    color: @workspace-text-focused;
+    background-color: @workspace-background-focused;
+}
+
+#workspaces button.urgent {
+    color: @stats-background;
+    background-color: #9ec3c4;
+}
+
+#workspaces button:hover {
+    background-color: #c49ec4;
+    color: @stats-background;
+}
+
+#custom-date,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#workspaces,
+#window {
+    color: @stats-text;
+    background-color: @stats-background;
+    padding: 5px 10px 5px 10px;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
+#workspaces {
+    background-color: @workspace-background;
+}
