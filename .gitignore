@@ -8,3 +8,13 @@ git
 gtk-3.0
 gtk-4.0
 emacs
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
